@@ -1,0 +1,50 @@
+//Create Books Library
+package Demo;
+import java.util.*;
+class books{
+	int id;
+	int age;
+	String name;
+	void setId(int id) {
+		this.id=id;
+	}
+	void setAge(int age) {
+		this.age= age;
+	}
+	void setName(String name) {
+		this.name=name;
+	}
+	int getId() {
+		return id;
+	}
+	int getage() {
+		return age;
+	}
+	String getname() {
+		return name;	
+	} 
+}
+public class Demo{
+	public static void main(String x[]) {
+		Scanner sc = new Scanner(System.in);
+		
+		 ArrayList<books> al = new ArrayList<books>();
+		System.out.println("How many Books ??");
+		int s = sc.nextInt();
+		books b[] = new books[s];
+		
+		for(int i=0;i<s;i++) {
+			b[i] = new books();
+			
+			b[i].setId(sc.nextInt());
+			b[i].setAge(sc.nextInt());
+			b[i].setName(sc.next());
+			
+			al.add(b[i]);
+		}
+			 for(books e: al) { 
+			 System.out.println("\nId:   "+e.getId()+"\nAge:  "+e.getage()+"\nName: " + e.getname());
+			 System.out.print("-------------------------------------------------------------------");
+			 }
+	}
+}
